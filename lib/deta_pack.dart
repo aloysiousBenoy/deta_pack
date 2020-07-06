@@ -20,6 +20,7 @@ class detaBase {
 
   putData(String base, String items) async {
     String url = basicUrl + '/' + base + '/items';
+    String body = '{"items":[$items]}';
     return http.put(url, headers: headers, body: items);
   }
 
@@ -39,9 +40,11 @@ class detaBase {
     return http.patch(url, headers: headers, body: body);
   }
 
-  queryData(String base, String queries, int limit, String last) {
+  queryData(String base, String queries, {int limit,String last}) {
     String url = '$basicUrl/$base/query';
-    String body = '"query":[$queries],"limit":$limit,"last":"$last"';
+    String body = '"query":[$queries]';
+    body+=(limit!=null)?',"limit":$limit':'';
+    body+=(limit!=null)?',"last":"$last"':'';
     return http.post(url, headers: headers, body: body);
   }
 }

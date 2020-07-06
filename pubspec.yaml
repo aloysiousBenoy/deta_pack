@@ -1,7 +1,7 @@
 name: deta_pack
 description: A package for using deta Base features easily from within your flutter packages.
-version: 0.0.1
-author: Aloysious Benoy
+version: 0.1.0
+author: Aloysious Benoy <aloysiousbenoy@gmail.com>
 homepage:  https://github.com/aloysiousBenoy/deta_pack
 
 environment:
