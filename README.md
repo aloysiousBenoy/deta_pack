@@ -38,7 +38,7 @@ A simple example to demonstrate reading data from from your base :
 String apiKey = "a0abcyxz_aSecretValue";                   // Your API Key here. Remember, TOP SECRET!
 String projectId = "randomId";                             // Your project ID
 String baseName = "myBase";                                // Name of the base (database)
-var base = detaBase( apiKey , projectId );                 // Initialising an object with the apiKey and project ID
+var base = DetaBase( apiKey , projectId );                 // Initialising an object with the apiKey and project ID
 
 var response = base.getData( baseName , 'one' );           // Getting the element with key 'one'
 response.then( ( res ) => { print( res.body ) } );         // Prints the response to the adb/ terminal 
@@ -157,7 +157,7 @@ the delete string containing the field to be deleted from the item.
  
  #### Future<Response> queryData(String base, String queries, {int limit, String last})
  This method lets you query data from the base. i.e. gets you data that matches given queries.
- This method takes four arguments, the base name, the query string, 
+ This method takes two arguments, the base name, the query string, 
  Optional parameters are limit( max the number of items to be listed that match the query ) and the 'last' key that was listed in the previous query.
 ```
  // The query string contains an JSON string, containing the queries.
