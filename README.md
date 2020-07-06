@@ -16,15 +16,19 @@ dependencies:
 </code>
 After that, issue the pub get command.
 Then use the following to import it into your file :
-<code> import 'package:deta_pack/deta_pack.dart';</code>
+<code> 
+    import 'package:deta_pack/deta_pack.dart';
+</code>
 
 ## Usage :
 To use base features, you need to know your project ID and your API key for the project.
-Head over to (deta.sh)[http://deta.sh] to get started.
-> You need both project Id and the API key to talk with your deta base. Head over to (deta.sh)[deta.sh] to get yours
+Head over to [deta.sh](http://deta.sh) to get started.
+> You need both project Id and the API key to talk with your deta base. Head over to [deta.sh](deta.sh) to get yours
 
 Once you have your API key and your project Id, create an object of the class detaBase.
-<code>var base = detaBase(apiKey,projectId);</code>
+<code>
+    var base = detaBase(apiKey,projectId);
+</code>
 This initializes the object with your key and project ID.
 
 A simple example to demonstrate reading data from from your base :
@@ -39,12 +43,14 @@ var base = detaBase( apiKey , projectId );                 // Initialising an ob
 var response = base.getData( baseName , 'one' );           // Getting the element with key 'one'
 response.then( ( res ) => { print( res.body ) } );         // Prints the response to the adb/ terminal 
 </code>
+
 The getData() method returns a Future instance, which will resolve into a response object once the HTTP request is completed.
 The response returned is an object of the Response class from the HTTP Package. response.body  contains the response JSON, as specified in Deta HTTP API documentation.
 
 ## Reference :
 
 #### Future<Response> getData( String baseName, String key )
+
 This method lets you get data from your base.
 This method takes in two arguments, the name of the base and the key of the data to get. 
  Consider the base has the following data in it:
@@ -171,7 +177,7 @@ the delete string containing the field to be deleted from the item.
  
  
 > This package is in active development and will certainly get more features and functions soon. If you have any feature requests, please use the github repo,
-> (click here to go to github)[https://github.com/aloysiousBenoy/deta_pack].
+> [click here to go to github](https://github.com/aloysiousBenoy/deta_pack).
 > If you have a feature request, add it to the feature_request file in the repo and create a pull request. 
 > Please report any and all bugs using issues in github.
 
