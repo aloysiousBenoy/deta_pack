@@ -1,3 +1,6 @@
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/aloysiousBenoy/deta_pack/pulls)
+[![GitHub stars](https://img.shields.io/github/stars/aloysiousBenoy/deta_pack.svg?style=social&label=Star&maxAge=2592000)](https://github.com/aloysiousBenoy/deta_pack)
 # deta_pack
 
 A package for using deta Base features easily from within your flutter packages.
